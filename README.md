@@ -1,4 +1,4 @@
-# Disruptive Architectures - IoT - Checkpoint 02
+# EnergyTech - A TPC Solution
 
 ## Sumário
 - [Integrantes;](#integrantes)
@@ -55,7 +55,7 @@ A partir desse ponto, a segunda placa é configurada para exibir as informaçõe
 - LED Verde: Dados de porcentagem igual ou maior que 90%;
 - LED Vermelho: Dados de porcentagem abaixo de 90%.
 
-Dessa forma, as placas conversam entre si, por meio da replicação de dados em outros tópicos pelo Node-RED, enviando e consumindo informações de porcentagem e quantidade de volts simulados de uma bateria, respondendo pelos LEDs a situação em que se encontra o potenciômetro e criando Dashboards no NODE-RED.
+Dessa forma, as placas conversam entre si, por meio da replicação de dados em outros tópicos pelo Node-RED, enviando e consumindo informações de porcentagem e quantidade de volts simulados de uma bateria, respondendo pelos LEDs a situação em que se encontra o potenciômetro e criando Dashboards no Node-RED.
 
 ## Link das placas
 Publisher: https://wokwi.com/projects/414750098069787649 \

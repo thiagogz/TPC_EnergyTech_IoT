@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -339, "left": 60.4, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -340.9, "left": -72.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -310.8,
+      "left": 157.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -310.8,
+      "left": 90.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -235.2,
+      "left": 85.85,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -235.2,
+      "left": 153.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": -102.46,
+      "left": 105.83,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "bb1:bn.2", "bb1:3t.e", "black", [ "v0" ] ],
+    [ "bb1:bn.8", "bb1:10t.e", "black", [ "v0" ] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [ "v-0.1", "h38.1", "v49.3" ] ],
+    [ "esp:D2", "bb1:4b.j", "red", [ "h0" ] ],
+    [ "esp:D4", "bb1:11b.j", "red", [ "h0" ] ],
+    [ "led2:A", "bb1:4t.c", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:3t.c", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:4t.d", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:4b.h", "", [ "$bb" ] ],
+    [ "r4:1", "bb1:11t.d", "", [ "$bb" ] ],
+    [ "r4:2", "bb1:11b.h", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:11t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:10t.c", "", [ "$bb" ] ],
+    [ "esp:3V3", "oled1:VCC", "red", [ "v76.8", "h133.95" ] ],
+    [ "esp:D21", "oled1:SDA", "gold", [ "h18.9", "v162.8", "h115.13" ] ],
+    [ "esp:D22", "oled1:SCL", "green", [ "h0" ] ],
+    [ "bb1:bn.6", "oled1:GND", "black", [ "h-8", "v46.7" ] ]
+  ],
+  "dependencies": {}
+}

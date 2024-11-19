@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -150, "left": -150, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potentiometer",
+      "top": -126.1,
+      "left": 38.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "potentiometer:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "potentiometer:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [
+      "potentiometer:SIG",
+      "esp:D34",
+      "green",
+      [ "v28.8", "h-106", "v-134.4", "h-143.2", "v66.3" ]
+    ]
+  ],
+  "dependencies": {}
+}

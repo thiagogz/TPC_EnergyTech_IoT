@@ -2,6 +2,7 @@
 
 ## Sumário
 - [Integrantes;](#integrantes)
+- [Descrição da Solução;](#descrição-da-solução)
 - [Arquitetura da solução;](#arquitetura-da-solução)
 - [Vídeo da solução;](#vídeo-da-solução)
 - [Broker selecionado;](#broker-selecionado)
@@ -14,6 +15,11 @@
 - Ewerton Gonçalves - RM98571;
 - Guilherme Tantulli - RM97890;
 - Thiago Zupelli - RM99085.
+
+## Descrição da Solução
+A Energy Tech é uma plataforma em formato de marketplace, onde empresas, pequenos produtores e consumidores individuais podem comercializar energia renovável excedente, de forma segura e transparente.\
+O sistema inclui um programa de doação de energia para comunidades carentes, incentivando os fornecedores a contribuírem para a inclusão social, além de receber benefícios fiscais adicionais ao promover acesso à energia limpa em áreas vulneráveis.\
+O app combina tecnologias de IoT e blockchain para validar e registrar a energia gerada, armazenada e disponível para venda ou doação, assegurando que o marketplace opere com dados precisos e que as transações sejam seguras.
 
 ## Arquitetura da solução
 ![Imagem da arquitetura da solução.](images/EnergyTechDiagram.png)

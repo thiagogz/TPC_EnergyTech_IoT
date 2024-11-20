@@ -42,6 +42,9 @@ Essa configuração é feita a partir do seguinte código:\
 **`const char* mqtt_topic_voltage = "batteryVoltageIN";`**
 
 A conexão com o servidor acontece com a configuação **`client.setServer(mqtt_server, 1883);`**, onde indicamos o servidor do Broker e a porta utilizada. Assim, as placas estão configuradas para a conexão com a internet e o compartilhamento de informações pelo servidor.\
+\
+**IMPORTANTE**: A partir desse ponto, é necessário que o Node-RED esteja rodando com o comando **`node-red`** no prompt de comando e dar deploy no fluxo, contido na pasta "NodeRED". Ele é responsável por enviar os dados para os tópicos que a segunda placa irá receber.\
+\
 A segunda placa, responsável por receber as informações e atuante como Reciever, é configurada de maneira similar à primeira, mas para receber as informações após serem coletadas e redistribuídas pelo Node-RED:\
 \
 (Conexão com o servidor do Mosquitto)\

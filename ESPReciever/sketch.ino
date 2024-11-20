@@ -2,7 +2,7 @@
 #include <PubSubClient.h>
 #include <Adafruit_SSD1306.h>
 
-// Conexão Wi-Fi
+// Credenciais da rede WiFi
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
@@ -44,7 +44,7 @@ void setup() {
   reconnect();
 
   // Inicializa a tela OLED
-  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // 0x3C é o endereço I2C padrão do OLED
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { 
       Serial.println("Falha ao inicializar a tela OLED");
       while (true);
   }
@@ -53,6 +53,7 @@ void setup() {
   display.display();
 }
 
+// Função para conectar ao WiFi
 void setup_wifi() {
   Serial.print("Conectando-se ao WiFi ");
   Serial.println(ssid);
@@ -66,6 +67,7 @@ void setup_wifi() {
   Serial.println(WiFi.localIP());
 }
 
+// Função para reconectar ao servidor MQTT caso a conexão seja perdida
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Conectando-se ao broker MQTT...");
@@ -81,6 +83,7 @@ void reconnect() {
   }
 }
 
+// Função para recebimento dos dados via MQTT
 void callback(char* topic, byte* payload, unsigned int length) {
   String message;
   for (int i = 0; i < length; i++) {
